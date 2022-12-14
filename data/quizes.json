@@ -1,0 +1,92 @@
+{
+	"mathquiz": {
+		"name": "Math Quiz",
+		"description": "This is a math quiz to test how good you are at multiplication",
+
+		"1": {
+			"question": "What is 5 * 5",
+			"correctOption": 3,
+			"option1": "10",
+			"option2": "20",
+			"option3": "25",
+			"option4": "30"
+		},
+
+		"2": {
+			"question": "What is 3 * 15",
+			"correctOption": 2,
+			"option1": "30",
+			"option2": "45",
+			"option3": "50",
+			"option4": "75"
+		},
+
+		"3": {
+			"question": "What is 2 * 3",
+			"correctOption": 4,
+			"option1": "3",
+			"option2": "4",
+			"option3": "5",
+			"option4": "6"
+		},
+
+		"4": {
+			"question": "What is 40 * 2.5",
+			"correctOption": 2,
+			"option1": "80",
+			"option2": "100",
+			"option3": "120",
+			"option4": "140"
+		},
+
+		"5": {
+			"question": "What is 4 * 4",
+			"correctOption": 3,
+			"option1": "8",
+			"option2": "10",
+			"option3": "16",
+			"option4": "24"
+		}
+	},
+
+	"capitalsquiz": {
+		"name": "Capital Cities Quiz",
+		"description": "How many country capital cities do you know? Test yourself at this quiz!",
+
+		"1": {
+			"question": "What is the capital of Norway",
+			"correctOption": 1,
+			"option1": "Oslo",
+			"option2": "Stockholm",
+			"option3": "København",
+			"option4": "London"
+		},
+
+		"2": {
+			"question": "What is the capital of England",
+			"correctOption": 4,
+			"option1": "Oslo",
+			"option2": "Stockholm",
+			"option3": "København",
+			"option4": "London"
+		},
+
+		"3": {
+			"question": "What is the capital of Denmark",
+			"correctOption": 3,
+			"option1": "Oslo",
+			"option2": "Stockholm",
+			"option3": "København",
+			"option4": "London"
+		},
+
+		"4": {
+			"question": "What is the capital of Sweden",
+			"correctOption": 2,
+			"option1": "Oslo",
+			"option2": "Stockholm",
+			"option3": "København",
+			"option4": "London"
+		}
+	}
+}

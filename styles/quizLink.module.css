@@ -1,0 +1,9 @@
+.container {
+	background-color: cornflowerblue;
+	justify-content: center;
+	width: 60%;
+	height: 60%;
+	margin: auto;
+	margin-top: 4%;
+	padding: 5%;
+}

@@ -1,0 +1,27 @@
+.nav {
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 80px;
+	background-color: rgb(255, 255, 255);
+	color: black;
+	display: flex;
+	align-items: center;
+	list-style: none;
+}
+
+.el {
+	margin-left: auto;
+	padding: 21px;
+	font-weight: bold;
+	font-size: 180%;
+}
+
+.textLeft:hover {
+	background-color: rgb(180, 180, 180);
+}
+
+.textRight {
+	text-align: right;
+	margin-right: 2%;
+}
