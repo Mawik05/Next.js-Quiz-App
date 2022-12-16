@@ -1,5 +1,11 @@
 # Quiz-App
 
-This is a quiz app. You can select a quiz you would like to play.
+Dette er Quiz-appen min. Jeg bestemte meg for å lage denne i Next.js. Dette var fordi jeg synes selv at jeg begynner å beherske vanlig HTML, CSS og Javascript. Derfor for å utfordre meg litt så tenkte jeg det hadde vært fint å lære meg et Javascript framework, som Next.js. En stor utfordring under prosjektet ble å lære meg å bruke Next.js. Jeg hadde veldig lite erfaring med dette fra før av, så jeg synes det var veldig lærerikt å få lære noe nytt og få prøve Next.js.
 
-The project is dynamic and it is easy to add new quizez by simply modifying the API to return another quiz.
+Planen min for prosjektet er å ordne en hovedside der brukeren har muligheten til å velge mellom flere quizer. Fra denne siden tenkte jeg at bruker kunne bli tatt til en ny side der de får opp quiz spørsmålene en om gangen. Når de har svart på spørsmålet, ønsker jeg å vise hvilket svar alternativt som var riktig og vise en neste knapp som tar de til neste spørsmål. Når quizen er ferdig vil jeg at brukeren skal se hvor mange spørsmål de fikk riktig.
+
+Det jeg ønsker å prøve å få til er at det meste er lett forstørbart. Altså, at det er lett å legge til mange ulike quizer, uten å må manuelt lage en ny web page for hver eneste quiz. Det hadde også vært fint å ordne det slikt at om en ny quiz blir lagt til, så blir hjemmesiden med en liste over alle quizene også automatisk oppdatert. Jeg tenker at dette kan bli en stor utfordring å løse. 
+
+Så er det hvilke løsninger jeg tenker kan fungere for disse problemene. For at det skal være enkelt å lage en ny quiz, så tenker jeg at så enkelt som at jeg har en .JSON fil med spørsmålene og svarene til quizen. En annen løsning til dette kan være å lage en API som gir informasjonen jeg trenger til quizen. For å ordne sidene lett forstørbart, så tenker jeg å ordne en *dynamic page*. Dette er en side du blir tatt til som kan ha en helt dynamisk URL, for eksempel om du går på "quizApp/mathquiz" eller "quizApp/geographyquiz" så blir du tatt til samme side. Med dette kan jeg gjøre det slikt at om jeg går til "quizApp/mathquiz" henter jeg spørsmålene fra "mathquiz" filen, og om jeg går inn på en annen side, så henter jeg quizen for den siden. 
+
+Jeg endte opp med å lage en API som sender informasjonen som er nødvendig, som hva spørsmålene er og hva riktig svar er. Løsningen min på å lage en *dynamic page* fungerte også bra.  Nå henter den quizen og spørsmålene til riktig URL, og om det ikke er noe quiz med en URL, så blir brukeren sendt til hjemmesiden. Jeg hadde oppnådd målet mitt ved å gjøre det enkelt å legge til en quiz. Alt du trenger å gjøre for å legge til en ny quiz er å legge til ett nytt JSON objekt i API filen, så er en ny quiz ordnet.
