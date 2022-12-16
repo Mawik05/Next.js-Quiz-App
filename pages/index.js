@@ -13,15 +13,17 @@ export default function Home({ QuizExport }) {
 			<Navbar></Navbar>
 
 			<main className={styles.container}>
-				<h1>Select a quiz to get started</h1>
+				<h1 className={styles.centerComplete}>Select a quiz to get started</h1>
 
 				<div>
 					{QuizExport.map(function (item) {
 						return (
 							<QuizCard
+								key={item.quizLink}
 								name={item.name}
 								description={item.description}
 								link={item.quizLink}
+								questionCount={Object.keys(item).length - 3}
 							></QuizCard>
 						);
 					})}

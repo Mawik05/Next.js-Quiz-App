@@ -99,6 +99,120 @@ export default function handler(req, res) {
 		},
 
 		{
+			quizLink: "periodictable",
+			name: "Periodic Table Quiz",
+			description:
+				"How well do you know the periodic table? This test will test how well you remember certain things from the periodic table.",
+
+			1: {
+				question: "What is the atomic number for Helium?",
+				correctOption: 2,
+				option1: "1",
+				option2: "2",
+				option3: "3",
+				option4: "4",
+			},
+
+			2: {
+				question: "Which element has the symbol \"FE\"?",
+				correctOption: 4,
+				option1: "Nitrogen",
+				option2: "Silicon",
+				option3: "Copper",
+				option4: "Iron",
+			},
+
+			3: {
+				question: "What symbol has copper?",
+				correctOption: 2,
+				option1: "Co",
+				option2: "Cu",
+				option3: "Ce",
+				option4: "Ko",
+			},
+
+			4: {
+				question: "What element has symbol \"NA\"?",
+				correctOption: 1,
+				option1: "Sodium",
+				option2: "Lithium",
+				option3: "Zinc",
+				option4: "Nothing",
+			},
+
+			5: {
+				question: "What weight does Hydrogen have",
+				correctOption: 3,
+				option1: "0.1",
+				option2: "0.8",
+				option3: "1.008",
+				option4: "2.4",
+			},
+
+			6: {
+				question: "What atomic number is Oxygen",
+				correctOption: 4,
+				option1: "5",
+				option2: "6",
+				option3: "7",
+				option4: "8",
+			},
+
+			7: {
+				question: "What atomic number is Nitrogen",
+				correctOption: 3,
+				option1: "5",
+				option2: "6",
+				option3: "7",
+				option4: "8",
+			},
+
+			8: {
+				question: "What element has symbol \"C\"",
+				correctOption: 2,
+				option1: "Calcium",
+				option2: "Carbon",
+				option3: "Chlorine",
+				option4: "Cobalt",
+			},
+		},
+
+		{
+			quizLink: "quizapp",
+			name: "Quiz About Quiz App!",
+			description:
+				"This is a quiz about this Quiz App!",
+
+			1: {
+				question: "What is this app made in?",
+				correctOption: 4,
+				option1: "HTML, CSS and Javascript",
+				option2: "Express",
+				option3: "React",
+				option4: "Next.js",
+			},
+
+			2: {
+				question: "What does the README.md file for the project contain?",
+				correctOption: 1,
+				option1: "About the Quiz app and my plan for the project",
+				option2: "Useless stuff",
+				option3: "Information about Next.js",
+				option4: "There is no README.md file",
+			},
+
+			3: {
+				question: "How easy is it to add a new quiz?",
+				correctOption: 4,
+				option1: "Completely impossible",
+				option2: "You have to code a new page for each quiz",
+				option3: "You have to change an existing page",
+				option4: "You have to add the new quiz to the quizes.js file",
+			},
+
+		},
+
+		{
 			quizLink: "testquiz",
 			name: "Test Quiz",
 			description: "This is a test quiz used for testing.",
@@ -133,15 +247,6 @@ export default function handler(req, res) {
 			4: {
 				question: "Answer is option 4.",
 				correctOption: 4,
-				option1: "Option 1",
-				option2: "Option 2",
-				option3: "Option 3",
-				option4: "Option 4",
-			},
-
-			5: {
-				question: "Bonus Question: Answer is option 1.",
-				correctOption: 1,
 				option1: "Option 1",
 				option2: "Option 2",
 				option3: "Option 3",

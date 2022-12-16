@@ -8,6 +8,8 @@ export default function QuizCard(props) {
 
 			<p>{props.description}</p>
 
+			<p className={styles.textBold}>Number of questions: {props.questionCount}</p>
+
 			<Link className={styles.quizLink} href={props.link}>
 				Go to Quiz!
 			</Link>

@@ -11,10 +11,8 @@ export default function QuizPage({ QuizExport }) {
 	const [currentQuestionNum, setCurrentQuestionNum] = useState(1);
 	const [score, setScore] = useState(0);
 	const [submit, setSubmit] = useState(false);
-	const [option1, setOption1] = useState("");
-	const [option2, setOption2] = useState("");
-	const [option3, setOption3] = useState("");
-	const [option4, setOption4] = useState("");
+	const [correctAnswer, setCorrectAnswer] = useState(0);
+	const [wrongAnswer, setWrongAnswer] = useState(0);
 
 	let Quiz = {};
 
@@ -39,21 +37,34 @@ export default function QuizPage({ QuizExport }) {
 	// Javascript functionallity
 	function answer(answerNum) {
 		for (let i = 1; i <= 4; i++) {
+			// Set the style to the correct answer box to be green
 			if (i === Quiz[currentQuestionNum].correctOption) {
-				setOption1(styles.correctAnswer);
+				setCorrectAnswer(i);
+
+				// If user answered correct, increase score
+				if (i === answerNum) {
+					setScore(score + 1);
+				}
+
+			} else if (i === answerNum) {
+				// If user answered wrong, set the style to the answer box to be red
+				setWrongAnswer(i);
 			}
 		}
+
+		// Show the continue button and disable buttons
 		setSubmit(true);
 	}
 
 	function nextQuestion() {
+		setCorrectAnswer(0);
+		setWrongAnswer(0);
 		setCurrentQuestionNum(currentQuestionNum + 1);
 		setSubmit(false);
 	}
 
 	// If there are no more questions, display the finished page
 	if (Quiz.hasOwnProperty(currentQuestionNum) === false) {
-		console.log("No more question");
 		return <QuizComplete score={score} maxScore={currentQuestionNum - 1} />;
 	}
 
@@ -70,16 +81,20 @@ export default function QuizPage({ QuizExport }) {
 				<h1>{Quiz[currentQuestionNum].question}</h1>
 				<div>
 					<button
-						id="1"
-						className={[styles.btn, option1].join(" ")}
+						className={(styles.btn) + " " + 
+						(correctAnswer === 1 ? styles.correctAnswer : null) + " " + 
+						(wrongAnswer === 1 ? styles.wrongAnswer : null)}
 						onClick={() => answer(1)}
+						disabled={submit ? true : false}
 					>
 						{Quiz[currentQuestionNum].option1}
 					</button>
 					<button
-						id="2"
-						className={[styles.btn, option2].join(" ")}
+						className={(styles.btn) + " " + 
+						(correctAnswer === 2 ? styles.correctAnswer : null) + " " + 
+						(wrongAnswer === 2 ? styles.wrongAnswer : null)}
 						onClick={() => answer(2)}
+						disabled={submit ? true : false}
 					>
 						{Quiz[currentQuestionNum].option2}
 					</button>
@@ -87,16 +102,20 @@ export default function QuizPage({ QuizExport }) {
 
 				<div>
 					<button
-						id="3"
-						className={[styles.btn, option3].join(" ")}
-						onClick={() => answer(3)}
+						className={(styles.btn) + " " + 
+						(correctAnswer === 3 ? styles.correctAnswer : null) + " " + 
+						(wrongAnswer === 3 ? styles.wrongAnswer : null)}
+						onClick={() => answer(3) }
+						disabled={submit ? true : false}
 					>
 						{Quiz[currentQuestionNum].option3}
 					</button>
 					<button
-						id="4"
-						className={[styles.btn, option4].join(" ")}
+						className={(styles.btn) + " " + 
+						(correctAnswer === 4 ? styles.correctAnswer : null) + " " + 
+						(wrongAnswer === 4 ? styles.wrongAnswer : null)}
 						onClick={() => answer(4)}
+						disabled={submit ? true : false}
 					>
 						{Quiz[currentQuestionNum].option4}
 					</button>

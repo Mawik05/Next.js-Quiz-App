@@ -7,14 +7,14 @@
 
 	width: 80%;
 	margin: auto;
-	margin-top: 6%;
+	margin-top: 20vh;
 	padding: 4%;
 }
 
 .btn {
 	font-size: 110%;
 
-	padding: 3% 16% 3% 16%;
+	padding: 3% 12% 3% 12%;
 	margin: 2%;
 }
 
@@ -28,4 +28,8 @@
 
 .nextBtn {
 	background-color: cyan;
+	font-size: 110%;
+
+	padding: 2% 8% 2% 8%;
+	margin: 2%;
 }
